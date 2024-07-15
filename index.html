@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head tag started-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        margin-top: 150px;
+        margin-left: 10px;
+        text-align: center;
+        justify-content: center;
+        font-size: 40px;
+        font-style: italic;
+      }
+      body {
+        background-color: #d3d3d3;
+      }
+      button {
+        margin-left: 700px;
+        padding: 15px 32px;
+        font-size: 16px;
+        background-color: rgba(8, 241, 8, 0.77);
+        border-radius: 20px;
+        border: 10px;
+        border-width: 1px;
+        border-color: red;
+      }
+      #demo {
+        color: white;
+        font-size: 40px;
+        font-family: "Times New Roman", Times, serif;
+        margin-bottom: 200px;
+        margin-left: 100px;
+        text-align: center;
+        font-style: italic;
+      }
+      #date {
+        margin-left: 560px;
+        color: white;
+        font-size: 20px;
+      }
+      img {
+        margin-left: 730px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <!-- head tag close -->
+  <body>
+    <p>QUOTE OF THE DAY!!!</p>
+
+    <div id="demo"></div>
+    <div id="img">
+      <img src="thumb.PNG" alt="thumps up" width="100px" height="100px" />
+    </div>
+    <div id="date"></div>
+    <button onclick="color()">CLICK ME!!!</button>
+    <!-- javascript starts -->
+    <script>
+      var qoute = [
+        "The only way to do great work is to love what you do. - Steve Job",
+
+        "Life is what happens when you're busy making other plans.- John Lennon",
+
+        "Do not watch the clock. Do what it does. Keep going. - Sam Levenson",
+
+        "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+
+        "The best way to predict the future is to invent it. - Alan Kay",
+
+        "Believe you can and you're halfway there.- Theodore Roosevelt",
+
+        "Your time is limited, don't waste it living someone else's life. - Steve Jobs",
+
+        "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
+
+        "Don't watch the clock; do what it does. Keep going.- Sam Levenson",
+      ];
+      function date1() {
+        const d = new Date();
+        document.getElementById("date").innerHTML = d;
+      }
+      function color() {
+        var a = Math.floor(Math.random() * 255);
+        var b = Math.floor(Math.random() * 255);
+        var c = Math.floor(Math.random() * 255);
+        d = `rgb(${a},${b},${c})`;
+        document.body.style.backgroundColor = d;
+        var qoute_no = Math.floor(Math.random() * 9);
+        document.getElementById("demo").innerHTML = qoute[qoute_no];
+
+        date1();
+      }
+    </script>
+    <!-- javascript ends -->
+  </body>
+</html>
